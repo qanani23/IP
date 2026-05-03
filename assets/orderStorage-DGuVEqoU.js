@@ -1,0 +1,1 @@
+var e=`abby-key-last-order`;function t(t){try{localStorage.setItem(e,JSON.stringify(t))}catch{}}function n(){try{let t=localStorage.getItem(e);if(!t)return null;let n=JSON.parse(t);return!n||typeof n.orderId!=`string`?null:n}catch{return null}}export{t as n,n as t};
