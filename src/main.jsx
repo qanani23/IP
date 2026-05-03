@@ -12,6 +12,13 @@ import AuthLoader from './components/AuthLoader.jsx';
 
 const clerkKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
+if (!clerkKey) {
+  console.error(
+    '[Abby-Key] VITE_CLERK_PUBLISHABLE_KEY is not set. ' +
+    'Add it to your Netlify environment variables (Site settings → Environment variables).'
+  );
+}
+
 // ─── Lazy-loaded pages ────────────────────────────────────────────────────────
 // Each page is a separate chunk. The homepage (App.jsx) contains the 3D/R3F
 // bundle — it is isolated here so store pages never download Three.js.
