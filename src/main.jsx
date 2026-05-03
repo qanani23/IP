@@ -1,6 +1,6 @@
 import { StrictMode, lazy, Suspense } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { HelmetProvider } from 'react-helmet-async';
 import { ClerkProvider, RedirectToSignIn, useAuth, AuthenticateWithRedirectCallback } from '@clerk/react';
